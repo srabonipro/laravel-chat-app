@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\WordController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('languages', [LanguageController::class, 'index'])->name('language.index');
 Route::get('languages/create', [LanguageController::class, 'create'])->name('language.create');
 Route::post('languages/store', [LanguageController::class, 'store'])->name('language.store');
+
+Route::get('languages/phrase/{language}', [WordController::class, 'phrase'])->name('language.phrase');

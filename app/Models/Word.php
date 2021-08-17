@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Language extends Model
+class Word extends Model
 {
     use HasFactory;
     protected $guarded = [];
 
-    public function words()
+    public function language()
     {
-        return $this->hasMany(Word::class);
+        return $this->belongsTo(Language::class);
     }
 }

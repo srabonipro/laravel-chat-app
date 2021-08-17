@@ -23,9 +23,10 @@
                         <tbody>
                             @foreach ($languages as $language)
                             <tr>
-                              <th>{{ $loop->iteration }}</th>
+                              <td>{{ $loop->iteration }}</td>
                               <td>{{ $language->name }}</td>
                               <td>
+                                  <a href="{{ route('language.phrase', $language->id) }}" class="btn btn-secondary">Settings</a>
                                   <a href="#" class="btn btn-info">Edit</a>
                                   <a href="#" class="btn btn-danger">Delete</a>
                               </td>
