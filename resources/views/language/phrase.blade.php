@@ -15,7 +15,7 @@
                     @foreach ($phrases as $phrase)
                     <div class="mb-3 d-flex justify-content-between align-items-center">
                         <label class="form-label mr-2">{{ $phrase->key }}</label>
-                        <input type="text" value="{{ $phrase->key }}" name="home" class="form-control mr-2 @error('home') is-invalid @enderror">
+                        <input type="text" value="{{ $phrase->translation }}" name="home" class="form-control mr-2 @error('home') is-invalid @enderror">
                         <button class="btn btn-sm btn-secondary">update</button>
                         @error('home')<span class="invalid-feedback">{{ $message }}</span>@enderror
                     </div>
